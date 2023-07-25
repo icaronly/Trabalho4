@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Prático 5</title>
+</head>
+
+<body>
+    <script>
+        let idade = prompt("Qual é a sua idade?");
+        let maiorDe18Anos = idade >= 18;
+        let amigoDoDono = prompt("Você é amigo(a) do dono da festa? (Responda com 'sim' ou 'não')");
+        if (maiorDe18Anos || amigoDoDono.toLowerCase() === "sim") {
+            alert("Você pode entrar na festa!");
+        } else {
+            alert("Desculpe, você não pode entrar na festa.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h1>Vamos jogar Cara ou Coroa</h1>
+    <button onclick="jogar()">Começar</button>
+    <div id="pontuacao">Pontuação: 0</div>
+    <script>
+        let pontos = 0;
+        function jogar() {
+            while (true) {
+                const escolha = prompt("Escolha entre cara, coroa ou sair:");
+                if (escolha === "sair") {
+                    alert("Obrigado por jogar!");
+                    break;
+                } else if (escolha === "cara" || escolha === "coroa") {
+                    const moeda = Math.random();
+                    let resultado;
+                    if (moeda < 0.5) {
+                        resultado = "cara";
+                    } else {
+                        resultado = "coroa";
+                    }
+                    alert(`Resultado: ${resultado}`);
+                    if (escolha === resultado) {
+                        pontos++;
+                        alert(`Parabéns, você ganhou! Sua pontuação atual é: ${pontos}`);
+                    } else {
+                        pontos--;
+                        alert(`Você perdeu. Tente novamente! Sua pontuação atual é: ${pontos}`);
+                    }
+                    atualizarPontuacao();
+                } else {
+                    alert("Opção inválida. Escolha entre cara, coroa ou sair.");
+                }
+            }
+        }
+    function atualizarPontuacao() {
+        const pontuacaoElement = document.getElementById('pontuacao');
+        pontuacaoElement.innerText = `Pontuação: ${pontos}`;
+    }
+    </script>
+</body>
+</html>

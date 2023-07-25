@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 3</title>
+</head>
+
+<body>
+    <h1>Cálculo do Perímetro da Piscina Hexagonal</h1>
+    <label for="lado">Informe o comprimento do lado da piscina (m):</label>
+    <input type="number" id="lado">
+    <button onclick="calcularPerimetro()">Calcular</button>
+    <script>
+        function calcularPerimetro() {
+            let lado = document.getElementById("lado").value;
+            let perimetro = lado * 6;
+            document.write(`O valor do perímetro é ${perimetro} metros.`);
+        }
+    </script>
+</body>
+
+</html>

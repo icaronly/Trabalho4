@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicação Prática 5</title>
+</head>
+
+<body>
+  <script>
+    let numeros = [];
+    let numero;
+    while (true) {
+        numero = prompt("Informe um número (digite -1 para sair):");
+        if (numero === null) {
+            break;
+        }
+        numero = parseInt(numero);
+        if (isNaN(numero)) {
+            alert("Digite um número válido.");
+        } else if (numero === -1) {
+            break;
+        } else {
+            numeros.push(numero);
+        }
+    }
+    const soma = numeros.reduce((acc, cur) => acc + cur, 0);
+    alert(`A soma dos valores digitados é: ${soma}`);
+</script>
+</body>
+</html>

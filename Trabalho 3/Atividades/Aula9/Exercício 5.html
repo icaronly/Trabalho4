@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+
+<body>
+    <h1>Calculadora de Pagar as Conta</h1>
+    <label for="preco">Preço do produto:</label>
+    <input type="number" id="preco">
+    <label for="condicao">Condição de pagamento:</label>
+    <select id="condicao">
+        <option value="1">Opção 1 - À vista em dinheiro ou cheque (10% de desconto)</option>
+        <option value="2">Opção 2 - À vista no cartão de crédito (5% de desconto)</option>
+        <option value="3">Opção 3 - Em duas vezes</option>
+        <option value="4">Opção 4 - Em três vezes (10% de juros)</option>
+    </select>
+    <button onclick="calcularPagamento()">Calcular</button>
+    <p id="valorFinal"></p>
+
+    <script>
+        function calcularPagamento() {
+            let precoNormal = parseFloat(document.getElementById("preco").value);
+            let condicaoPagamento = document.getElementById("condicao").value;
+            let valorFinal;
+            if (condicaoPagamento === "1") {
+                valorFinal = precoNormal * 0.9;
+            } else if (condicaoPagamento === "2") {
+                valorFinal = precoNormal * 0.95;
+            } else if (condicaoPagamento === "3") {
+                valorFinal = precoNormal;
+            } else if (condicaoPagamento === "4") {
+                valorFinal = precoNormal * 1.1;
+            }
+            document.getElementById("valorFinal").innerHTML = "Valor a ser pago: R$ " + valorFinal.toFixed(2);
+        }
+    </script>
+</body>
+</html>

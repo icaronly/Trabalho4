@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicação Prática 7</title>
+</head>
+
+<body>
+  <script>
+      let numNegativos = 0;
+      let numPositivos = 0;
+      let numZeros = 0;
+      for (let i = 1; i <= 5; i++) {
+        const numero = parseFloat(prompt("Insira o número "+i));
+        if (numero < 0) {
+          numNegativos++;
+        } else if (numero > 0) {
+          numPositivos++;
+        } else {
+          numZeros++;
+        }
+      }
+      document.write(`Resultados:<br>
+            Números Negativos: ${numNegativos}<br>
+            Números Positivos: ${numPositivos}<br>
+            Números Zeros: ${numZeros}`)
+  </script>
+</body>
+</html>

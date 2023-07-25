@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 1</title>
+</head>
+
+<body>
+    <h1>Conversão de Milímetros</h1>
+    <label for="milimetros">Digite o valor em milímetros (mm):</label>
+    <input type="number" id="milimetros">
+    <button onclick="converter()">Converter</button>
+    <script>
+        function converter() {
+            let Milimetros = document.getElementById("milimetros").value;
+            let Centimetros = Milimetros / 10;
+            let Decimetros = Milimetros / 100;
+            let Metros = Milimetros / 1000;
+            let Decametros = Milimetros / 10000;
+            let Hectometros = Milimetros / 100000;
+            let Quilometros = Milimetros / 1000000;
+            document.write(`${Milimetros}mm valem ${Centimetros}cm <br>
+            ${Centimetros}cm valem ${Decimetros}dm <br>
+            ${Decimetros}dm valem ${Metros}m <br>
+            ${Metros}m valem ${Decametros}dam <br> 
+            ${Decametros}dam valem ${Hectometros}hm <br>
+            ${Hectometros}hm valem ${Quilometros}km`);
+        }
+    </script>
+</body>
+
+</html>

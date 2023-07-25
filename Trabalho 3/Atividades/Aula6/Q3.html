@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Prático 3</title>
+</head>
+<body>
+    <script>
+        let A = prompt("Insira o valor de a")
+        let B = prompt("insira o valor de b")
+        let C = prompt("Insira o valor de c")
+        let delta = (B ** 2) - 4 * A * C;
+            let x1, x2;
+            if (delta < 0) {1
+                document.write("Delta é menor que 0. Portanto não existem raízes reais");
+            } else {
+                x1 = (-B + Math.sqrt(delta)) / (2 * A);
+                x2 = (-B - Math.sqrt(delta)) / (2 * A);
+                document.write("As raízes são: x1 = " + x1.toFixed(1) + " e x2 = " + x2.toFixed(1));
+            }
+    </script>
+</body>
+</html>

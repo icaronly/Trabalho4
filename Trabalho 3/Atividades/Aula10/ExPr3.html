@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Prático 3</title>
+</head>
+
+<body>
+    <h1>Encontrando índice de elemento em array</h1>
+    <script>
+        let letras = ["a", "b", "c", "d", "e"];
+        let elemento = "c";
+        function encontrarIndice(array, elemento) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === elemento) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        let indice = encontrarIndice(letras, elemento);
+        if (indice !== -1) {
+            document.write(`O índice do elemento ${elemento} é: ${indice}`);
+        } else {
+            document.write(`O elemento ${elemento} não foi encontrado no array.`);
+        }
+    </script>
+</body>
+
+</html>

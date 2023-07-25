@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+</head>
+
+<body>
+    <script>
+        let ages = [
+            parseInt(prompt('insira a primeira idade')),
+            parseInt(prompt('insira a segunda idade')),
+            parseInt(prompt('insira a terceira idade')),
+            parseInt(prompt('insira a quarta idade')),
+            parseInt(prompt('insira a quinta idade'))
+        ]
+        let min = Math.min(...ages)
+        let max = Math.max(...ages)
+        document.write(`\
+        Menor idade: ${min}
+        Maior idade: ${max}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 2</title>
+</head>
+
+<body>
+    <h1>Conversão de Metros</h1>
+    <label for="metros">Digite o valor em metros (m):</label>
+    <input type="number" id="metros">
+    <button onclick="converter()">Converter</button>
+
+    <script>
+        function converter() {
+            let Metros = document.getElementById("metros").value;
+            let Centimetros = Metros * 10;
+            let Decimetros = Metros * 100;
+            let Milimetros = Metros * 1000;
+            document.write(`${Metros}m valem ${Decimetros}dm <br>
+            ${Decimetros}dm valem ${Centimetros}cm <br>
+            ${Centimetros}cm valem ${Milimetros}mm `);
+        }
+    </script>
+</body>
+
+</html>

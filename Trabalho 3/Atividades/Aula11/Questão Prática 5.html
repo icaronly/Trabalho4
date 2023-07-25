@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão Prática 5</title>
+</head>
+
+<body>
+  <h1>Equação do 2º Grau</h1>
+  <button onclick="calcularRaizes()">Calcular Raízes</button>
+
+  <script>
+    function calcularRaizes() {
+      const a = parseFloat(prompt("Informe o valor de a:"));
+      const b = parseFloat(prompt("Informe o valor de b:"));
+      const c = parseFloat(prompt("Informe o valor de c:"));
+
+      if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        alert("Insira valores válidos.");
+      } else {
+        const delta = b * b - 4 * a * c;
+        if (delta < 0) {
+          alert("Não possui raízes reais.");
+        } else if (delta === 0) {
+          const x = -b / (2 * a);
+          alert(`Possui uma raiz real: ${x}`);
+        } else {
+          const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+          const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+          alert(`Possui duas raízes reais: ${x1.toFixed(1)} e ${x2.toFixed(1)}`);
+        }
+      }
+    }
+  </script>
+</body>
+</html>

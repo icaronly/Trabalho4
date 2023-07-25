@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 4</title>
+</head>
+<body>
+    <script>
+        let estoque = {
+            'maça': 10,
+            'pera': 30,
+            'uva': 20
+        }
+        function remove(item, quant) {
+            if (!(item in estoque)){
+                document.write(`esse item não está no estoque.`)
+                return
+            } else if(quant > estoque[item]) {
+                document.write(`quantidade acima do valor no estoque`)
+                return
+            }
+            estoque[item] -= quant
+            document.write(`${quant} itens removidos com sucesso, agora há ${estoque[item]} em estoque`)
+        }
+        remove('maça', 5);
+    </script>
+</body>
+</html>

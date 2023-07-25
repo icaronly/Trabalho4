@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+
+<body>
+    <h1>Calcular Área do Trapézio</h1>
+    <label for="baseMaior">Base Maior:</label>
+    <input type="number" id="baseMaior">
+
+    <label for="baseMenor">Base Menor:</label>
+    <input type="number" id="baseMenor">
+
+    <label for="altura">Altura:</label>
+    <input type="number" id="altura">
+
+    <button onclick="calcularArea()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularArea() {
+            let baseMaior = document.getElementById("baseMaior").value;
+            let baseMenor = document.getElementById("baseMenor").value;
+            let altura = document.getElementById("altura").value;
+            baseMaior = parseFloat(baseMaior);
+            baseMenor = parseFloat(baseMenor);
+            altura = parseFloat(altura);
+            let area = ((baseMaior + baseMenor) * altura) / 2;
+            document.getElementById("resultado").innerHTML = "A área do trapézio é: " + area;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação Prática 3</title>
+</head>
+
+<body>
+    <h1>Contador de 10 a 20</h1>
+    <button onclick="contador()">Iniciar</button>
+    <div id="resultado"></div>
+    <script>
+        const resultado = document.getElementById('resultado');
+        function contador() {
+            for (let i = 10; i <= 20; i++) {
+                resultado.innerHTML += i + ' <br> ';
+            }
+        }
+    </script>
+</body>
+</html>

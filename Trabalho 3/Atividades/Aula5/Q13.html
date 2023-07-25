@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 13</title>
+</head>
+
+<body>
+    <p id="p"></p>
+    <script>
+        let altura = prompt(`Digite sua altura`);
+        let peso = prompt(`Você pesa quanto?`);
+        let IMC = peso / (altura ** 2);
+        document.getElementById(`p`);
+        if (IMC < 18.5) {
+            document.write(`Informe o peso ${peso} <br>  Informe a altura ${altura}<br>Você está abaixo do peso`);
+        } else if (IMC >= 18.5 && IMC <= 24.9) {
+            document.write(`Informe o peso ${peso} <br>  Informe a altura ${altura}<br>Você está no peso normal`);
+        } else if (IMC >= 24 && IMC < 29.9) {
+            document.write(`Informe o peso ${peso} <br>  Informe a altura ${altura}<br>Você está com excesso de peso`);
+        } else if (IMC >= 30) {
+            document.write(`Informe o peso ${peso} <br>  Informe a altura ${altura}<br>Você está com obesidade`);
+        } else if (IMC > 35) {
+            document.write(`Informe o peso ${peso} <br>  Informe a altura ${altura}<br>Você está com obesidade extrema`);
+        }
+    </script>
+</body>
+</html>

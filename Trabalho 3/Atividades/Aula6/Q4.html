@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Prático 4</title>
+</head>
+
+<body>
+    <script>
+        let idade = parseInt(prompt("Digite sua idade:"));
+        let temTituloEleitor = prompt("Você possui título de eleitor? (sim ou não)").toLowerCase();
+        if (idade >= 16 && temTituloEleitor === "sim") {
+            alert("Pode votar");
+        } else {
+            alert("Não pode votar");
+        }
+    </script>
+</body>
+</html>

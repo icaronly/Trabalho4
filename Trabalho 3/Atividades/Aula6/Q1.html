@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Prático 1</title>
+</head>
+
+<body>
+    <script>
+        let notas = [
+            parseInt(prompt('insira a primeira nota')), 
+            parseInt(prompt('insira a segunda nota')), 
+            parseInt(prompt('insira a terceira nota')), 
+            parseInt(prompt('insira a quarta nota'))
+        ].reduce((a, b) => a + b) / 4
+        console.log(notas)
+        if (notas >= 7) {
+            document.write('aprovado')
+        } else {
+            document.write('reprovado')
+        }
+    </script>
+</body>
+</html>

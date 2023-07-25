@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cálculo da Área do Círculo</h1>
+    <label for="raio">Informe o raio da base (m):</label>
+    <input type="number" id="raio">
+    <button onclick="calcularArea()">Calcular</button>
+    <script>
+        function calcularArea() {
+            let raio = document.getElementById("raio").value;
+            let area = Math.PI * Math.pow(raio, 2);
+            document.write(`A área do círculo é ${area.toFixed(1)} metros quadrados.`);
+        }
+    </script>
+</body>
+</html>

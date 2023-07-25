@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 9</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Insira o valor de a")
+        let b = prompt("insira o valor de b")
+        let c = prompt("Insira o valor de c")
+        let delta = (b**2) - 4*a*c
+        let z = Math.sqrt(delta)
+        let x1 = (-b + z)/2*a 
+        let x2 = (-b - z)/2*a
+        document.write(`Valor de a é: ${a} <br>`);
+        document.write(`Valor de b é: ${b} <br>`);
+        document.write(`Valor de c é: ${c} <br>`);
+        document.write(`x1: ${x1},  x2: ${x2}`);
+    </script>
+</body>
+</html>

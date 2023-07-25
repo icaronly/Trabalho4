@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 5</title>
+</head>
+<body>
+    <script>
+        let estoque = {
+            'pera': 10,
+            'banana': 30,
+            'manga': 20
+        }
+        let sum = Object.values(estoque).reduce((a, b) => a + b, 0)
+        document.write(`Total de itens no estoque: ${sum}`)
+    </script>
+</body>
+</html>

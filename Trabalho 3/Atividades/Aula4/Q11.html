@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 11</title>
+</head>
+
+<body>
+    <h1>Conversor de Radianos para Graus</h1>
+    <label for="radianos">Insira o valor em radianos:</label>
+    <input type="text" id="radianos">
+    <button onclick="converterParaGraus()">Converter</button>
+    <div id="resultado"></div>
+    <script>
+        function converterParaGraus() {
+            let radianos = parseFloat(document.getElementById("radianos").value);
+            let graus = radianos * (180 / Math.PI);
+            document.getElementById("resultado").innerHTML = "O valor em graus é: " + graus.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

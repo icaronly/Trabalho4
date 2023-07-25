@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 7</title>
+</head>
+<body>
+    <form>
+        <label for="valor">Valor pago:</label>
+        <input type="number" id="valor" name="valor">
+        <br>
+        <label for="desconto">Desconto (%):</label>
+        <input type="number" id="desconto" name="desconto">
+        <br>
+        <button onclick="calcular()">Calcular</button>
+    </form>
+    <script>
+        function calcular() {
+          let valor = document.getElementById("valor").value;
+          let desconto = document.getElementById("desconto").value;
+          let valorComDesconto = valor - (valor * desconto / 100);
+          document.write(`Valor pago: R$ ${valor} <br>`)
+          document.write(`Valor do desconto: R$ ${desconto} <br>`)
+          document.write(`Valor com desconto: R$ ${valorComDesconto.toFixed(1)}`)
+        }
+        </script>
+        
+</body>
+</html>

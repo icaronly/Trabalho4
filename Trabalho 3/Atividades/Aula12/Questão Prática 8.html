@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 8</title>
+</head>
+
+<body>
+    <script>
+        let receita1 = {
+            'nome': "Bolo de Chocolate",
+            'ingredientes': ["farinha de trigo", "açúcar", "achocolatado", "ovos", "leite", "manteiga"],
+            'tempoPreparo': 60
+        }
+        let receita2 = {
+            'nome': "Lasanha",
+            'ingredientes': ["massa para lasanha", "carne moída", "queijo", "molho de tomate", "cebola", "alho"],
+            'tempoPreparo': 90
+        }
+        let receita3 = {
+            'nome': "Salada",
+            'ingredientes': ["alface", "tomate", "vinagre", "sal"],
+            'tempoPreparo': 20
+        }
+        let receitas = [receita1, receita2, receita3]
+        for (let i = 0; i < receitas.length; i++) {
+            document.write(`Receita: ${receitas[i].nome}<br>`);
+            document.write(`Ingredientes: ${receitas[i].ingredientes.join(", ")}<br>`);
+            document.write(`Tempo de preparo: ${receitas[i].tempoPreparo} minutos<br>`);
+            document.write(`------------------------<br>`);
+        }
+    </script>
+</body>
+</html>

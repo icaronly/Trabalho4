@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+
+<body>
+    <h1>Verificar Limite de Crédito</h1>
+    <button type="button" onclick="verificarLimite()">Verificar</button>
+    <p id="novoSaldo"></p>
+    <p id="mensagem"></p>
+    <script>
+        function verificarLimite() {
+            let numeroConta = Number(prompt("Número de conta:"));
+            let saldoInicial = Number(prompt("Saldo inicial:"));
+            let totalDespesas = Number(prompt("Total de despesas:"));
+            let totalCreditos = Number(prompt("Total de créditos:"));
+            let limiteCredito = Number(prompt("Limite de crédito:"));
+            let novoSaldo = saldoInicial + totalDespesas - totalCreditos;
+            document.write("Novo saldo: " + novoSaldo);
+            if (novoSaldo > limiteCredito) {
+                document.write("Limite de crédito excedido");
+            } else {
+                document.write("");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 1</title>
+</head>
+
+<body>
+  <label for="primeira">Digite o valor da primeira variável:</label>
+  <input type="number" id="primeira">
+  <br>
+  <label for="segunda">Digite o valor da segunda variável:</label>
+  <input type="number" id="segunda">
+  <br>
+  <button onclick="trocarValores()">Trocar Valores</button>
+  <br>
+  <div id="resultado"></div>
+  <script>
+    function trocarValores() {
+      let primeira = parseFloat(document.getElementById("primeira").value);
+      let segunda = parseFloat(document.getElementById("segunda").value);
+      console.log("Valores originais:");
+      console.log("PRIMEIRA =", primeira);
+      console.log("SEGUNDA =", segunda);
+      let temp = primeira;
+      primeira = segunda;
+      segunda = temp;
+      console.log("Valores trocados:");
+      console.log("PRIMEIRA =", primeira);
+      console.log("SEGUNDA =", segunda);
+      document.getElementById("resultado").innerHTML = "Abra o console para ver o resultado.";
+    }
+  </script>
+</body>
+</html>

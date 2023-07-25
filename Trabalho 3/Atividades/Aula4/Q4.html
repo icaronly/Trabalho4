@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 4</title>
+</head>
+<body>
+    <h1>Cálculo da Área do Retângulo</h1>
+    <label for="largura">Informe o valor da largura em metros:</label>
+    <input type="number" id="largura">
+    <br>
+    <label for="altura">Informe o valor da altura em metros:</label>
+    <input type="number" id="altura">
+    <button onclick="calcularArea()">Calcular</button>
+    <script>
+        function calcularArea() {
+            let largura = document.getElementById("largura").value;
+            let altura = document.getElementById("altura").value;
+            let area = largura * altura;
+            document.write(`A área do retângulo é ${area} metros quadrados.`);
+        }
+    </script>
+</body>
+</html>

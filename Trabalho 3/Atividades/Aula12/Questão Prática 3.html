@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 3</title>
+</head>
+
+<body>
+    <script>
+        let estoque = {
+            'maça': 10,
+            'pera': 30,
+            'uva': 20
+        }
+        function add(item, quant) {
+            if (!(item in estoque)){
+                document.write(`esse item não está no estoque.`)
+                return
+            }
+            estoque[item] += quant
+            document.write(`${quant} itens adicionados com sucesso, agora há ${estoque[item]} em estoque`)
+        }
+        add('maça', 15);
+    </script>
+</body>
+</html>

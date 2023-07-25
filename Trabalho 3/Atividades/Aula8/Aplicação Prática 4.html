@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicação Prática 4</title>
+</head>
+
+<body>
+  <h1>Vamos contar ao contrario, do 20 até o 10.</h1>
+  <button onclick="contar()">Contar</button>
+  <p id="numeros"></p>
+  <script>
+    function contar() {
+      let numeros = document.getElementById('numeros');
+      for (let i = 20; i >= 10; i--) {
+        numeros.innerHTML += i + ' <br> ';
+      }
+    }  
+  </script>
+</body>
+</html>

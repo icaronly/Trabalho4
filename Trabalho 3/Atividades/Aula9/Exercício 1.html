@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+
+<body>
+    <h1>Calculadora de Salário</h1>
+    <script>
+       let salariofix = parseFloat(prompt("Informe o salário fixo do funcionário:"));
+       let valorvend = parseFloat(prompt("Informe o valor das vendas do funcionário:"));
+       let comissao = valorvend * 0.04;
+       let salariofi = salariofix + comissao;
+        document.write("A comissão do funcionário é: R$ " + comissao.toFixed(2) + "<br>");
+        document.write("O salário final do funcionário é: R$ " + salariofi.toFixed(2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão Prática 4</title>
+</head>
+
+<body>
+    <button onclick="comparePokemon()">Compare Pokémon</button>
+    <script>
+        function comparePokemon() {
+            let ataque = prompt("Digite quantos pontos de ataque o pokemon possui");
+            let defesa = prompt("Digite quantos pontos de defesa o inimigo de seu pokemon possui");
+            if (isNaN(ataque) || isNaN(defesa)) {
+                alert("Os valores devem ser números. Por favor, tente novamente.");
+                return;
+            }
+            ataque = Number(ataque);
+            defesa = Number(defesa);
+            if (ataque > defesa) {
+                document.write("Seu pokemon é mais forte pois possui " + ataque + " pontos de ataque e o inimigo possui " + defesa + " pontos de defesa");
+            } else if (ataque === defesa) {
+                document.write("Seu pokemon vai anular a defesa do inimigo pois possui " + ataque + " pontos de ataque e o inimigo possui " + defesa + " pontos de defesa");
+            } else if (defesa > ataque && ataque < defesa) {
+                document.write("Seu pokemon é mais fraco pois possui " + ataque + " pontos de ataque e a defesa do inimigo é maior, possuindo " + defesa + " pontos de defesa");
+            }
+        }
+    </script>
+</body>
+</html>
